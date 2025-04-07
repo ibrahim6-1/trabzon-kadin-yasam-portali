@@ -1,7 +1,9 @@
+
 import React, { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const OnlineServices = () => {
   const [activeTab, setActiveTab] = useState("course");
@@ -26,35 +28,61 @@ const OnlineServices = () => {
             
             {/* Course Registration External Link */}
             <TabsContent value="course">
-              <div className="text-center py-10">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-6">Kurs Başvurusu</h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Kurs başvurusu için aşağıdaki bağlantıya tıklayarak Trabzon Belediyesi Etkinlikler sayfasına gidebilirsiniz.
-                </p>
-                <Button 
-                  onClick={() => window.open("https://kurumsal.trabzon.bel.tr/Etkinlikler", "_blank")}
-                  className="flex items-center gap-2 text-lg"
-                >
-                  Kurs Başvurusu Yap
-                  <ExternalLink size={20} />
-                </Button>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="rounded-lg overflow-hidden border border-muted mb-6">
+                    <AspectRatio ratio={16 / 9}>
+                      <img 
+                        src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80" 
+                        alt="Kadın yaşam merkezi kurs başvurusu" 
+                        className="w-full h-full object-cover"
+                      />
+                    </AspectRatio>
+                  </div>
+                </div>
+                <div className="text-center md:text-left py-4">
+                  <h2 className="text-2xl font-semibold text-gray-800 mb-6">Kurs Başvurusu</h2>
+                  <p className="text-lg text-gray-600 mb-8">
+                    Kurs başvurusu için aşağıdaki bağlantıya tıklayarak Trabzon Belediyesi Etkinlikler sayfasına gidebilirsiniz.
+                  </p>
+                  <Button 
+                    onClick={() => window.open("https://kurumsal.trabzon.bel.tr/Etkinlikler", "_blank")}
+                    className="flex items-center gap-2 text-lg"
+                  >
+                    Kurs Başvurusu Yap
+                    <ExternalLink size={20} />
+                  </Button>
+                </div>
               </div>
             </TabsContent>
             
             {/* Sports Center Membership External Link */}
             <TabsContent value="sports">
-              <div className="text-center py-10">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-6">Spor Merkezi Üyeliği</h2>
-                <p className="text-lg text-gray-600 mb-8">
-                  Spor merkezi üyeliği için aşağıdaki bağlantıya tıklayarak Trabzon Belediyesi Vatandaş Giriş sayfasına gidebilirsiniz.
-                </p>
-                <Button 
-                  onClick={() => window.open("https://kurumsal.trabzon.bel.tr/vatandaslogin", "_blank")}
-                  className="flex items-center gap-2 text-lg"
-                >
-                  Üyelik Başvurusu Yap
-                  <ExternalLink size={20} />
-                </Button>
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div className="order-2 md:order-1 text-center md:text-left py-4">
+                  <h2 className="text-2xl font-semibold text-gray-800 mb-6">Spor Merkezi Üyeliği</h2>
+                  <p className="text-lg text-gray-600 mb-8">
+                    Spor merkezi üyeliği için aşağıdaki bağlantıya tıklayarak Trabzon Belediyesi Vatandaş Giriş sayfasına gidebilirsiniz.
+                  </p>
+                  <Button 
+                    onClick={() => window.open("https://kurumsal.trabzon.bel.tr/vatandaslogin", "_blank")}
+                    className="flex items-center gap-2 text-lg"
+                  >
+                    Üyelik Başvurusu Yap
+                    <ExternalLink size={20} />
+                  </Button>
+                </div>
+                <div className="order-1 md:order-2">
+                  <div className="rounded-lg overflow-hidden border border-muted mb-6">
+                    <AspectRatio ratio={16 / 9}>
+                      <img 
+                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80" 
+                        alt="Spor merkezi üyeliği" 
+                        className="w-full h-full object-cover"
+                      />
+                    </AspectRatio>
+                  </div>
+                </div>
               </div>
             </TabsContent>
             
