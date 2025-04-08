@@ -21,7 +21,6 @@ import {
   TableHeader, 
   TableRow 
 } from "@/components/ui/table";
-import { Button } from "@/components/ui/button";
 
 type CourseDetails = {
   id: string;
@@ -135,11 +134,6 @@ const PriceList = () => {
                     </tbody>
                   </table>
                 </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("fitness", "sport")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
-                </div>
               </AccordionContent>
             </AccordionItem>
             
@@ -171,11 +165,6 @@ const PriceList = () => {
                       </tr>
                     </tbody>
                   </table>
-                </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("havuz", "sport")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -209,11 +198,6 @@ const PriceList = () => {
                     </tbody>
                   </table>
                 </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("pilates", "sport")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
-                </div>
               </AccordionContent>
             </AccordionItem>
             
@@ -245,11 +229,6 @@ const PriceList = () => {
                       </tr>
                     </tbody>
                   </table>
-                </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("reformer", "sport")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -283,11 +262,6 @@ const PriceList = () => {
                     </tbody>
                   </table>
                 </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("zumba", "sport")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
-                </div>
               </AccordionContent>
             </AccordionItem>
             
@@ -320,11 +294,6 @@ const PriceList = () => {
                     </tbody>
                   </table>
                 </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("combo", "sport")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
-                </div>
               </AccordionContent>
             </AccordionItem>
           </Accordion>
@@ -337,16 +306,31 @@ const PriceList = () => {
             <AccordionItem value="computer">
               <AccordionTrigger className="text-lg font-medium">Bilgisayar Kullanımı</AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-2">
-                  <div className="text-sm font-medium">Süre:</div>
-                  <div className="text-sm">2 Ay</div>
-                  <div className="text-sm font-medium">Ücret:</div>
-                  <div className="text-sm">1,200 TL</div>
-                </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("computer", "course")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Temel Bilgisayar</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,200 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">MS Office</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,400 TL</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -354,16 +338,31 @@ const PriceList = () => {
             <AccordionItem value="web">
               <AccordionTrigger className="text-lg font-medium">Web Tasarım</AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-2">
-                  <div className="text-sm font-medium">Süre:</div>
-                  <div className="text-sm">3 Ay</div>
-                  <div className="text-sm font-medium">Ücret:</div>
-                  <div className="text-sm">2,500 TL</div>
-                </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("web", "course")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">HTML/CSS</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba, Cuma</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2,500 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">JavaScript</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2,700 TL</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -371,16 +370,31 @@ const PriceList = () => {
             <AccordionItem value="painting">
               <AccordionTrigger className="text-lg font-medium">Resim</AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-2">
-                  <div className="text-sm font-medium">Süre:</div>
-                  <div className="text-sm">3 Ay</div>
-                  <div className="text-sm font-medium">Ücret:</div>
-                  <div className="text-sm">1,500 TL</div>
-                </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("painting", "course")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Temel Resim</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,500 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Yağlı Boya</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,800 TL</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -388,16 +402,31 @@ const PriceList = () => {
             <AccordionItem value="crafts">
               <AccordionTrigger className="text-lg font-medium">El Sanatları</AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-2">
-                  <div className="text-sm font-medium">Süre:</div>
-                  <div className="text-sm">2 Ay</div>
-                  <div className="text-sm font-medium">Ücret:</div>
-                  <div className="text-sm">1,000 TL</div>
-                </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("crafts", "course")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Ahşap Boyama</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,000 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Çini</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,200 TL</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </AccordionContent>
             </AccordionItem>
@@ -405,16 +434,31 @@ const PriceList = () => {
             <AccordionItem value="sewing">
               <AccordionTrigger className="text-lg font-medium">Dikiş ve Nakış</AccordionTrigger>
               <AccordionContent>
-                <div className="grid grid-cols-2">
-                  <div className="text-sm font-medium">Süre:</div>
-                  <div className="text-sm">3 Ay</div>
-                  <div className="text-sm font-medium">Ücret:</div>
-                  <div className="text-sm">1,800 TL</div>
-                </div>
-                <div className="mt-4">
-                  <Button variant="outline" onClick={() => handleCategoryClick("sewing", "course")} className="w-full">
-                    Detaylı Bilgi
-                  </Button>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full divide-y divide-gray-200">
+                    <thead className="bg-gray-50">
+                      <tr>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200">
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Temel Dikiş</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,800 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Nakış</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2,000 TL</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </AccordionContent>
             </AccordionItem>
