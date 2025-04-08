@@ -10,7 +10,8 @@ import {
   Dialog, 
   DialogContent, 
   DialogHeader, 
-  DialogTitle 
+  DialogTitle,
+  DialogDescription
 } from "@/components/ui/dialog";
 import { 
   Table, 
@@ -112,18 +113,24 @@ const PriceList = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">1 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">3 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">6 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">12 Ay</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Genel Fitness</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba, Cuma</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">400 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,100 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2,000 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">3,800 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Özel Fitness</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">600 TL</td>
                       </tr>
                     </tbody>
                   </table>
@@ -143,18 +150,24 @@ const PriceList = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">1 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">3 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">6 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">12 Ay</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Yüzme Dersi</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">500 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,350 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2,500 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">4,800 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Su Jimnastiği</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">550 TL</td>
                       </tr>
                     </tbody>
                   </table>
@@ -174,18 +187,24 @@ const PriceList = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">1 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">3 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">6 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">12 Ay</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Mat Pilates</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba, Cuma</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">450 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,200 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2,200 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">4,200 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Grup Pilates</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">500 TL</td>
                       </tr>
                     </tbody>
                   </table>
@@ -205,18 +224,24 @@ const PriceList = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">1 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">3 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">6 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">12 Ay</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Reformer Temel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">600 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,600 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">3,000 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">5,500 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Reformer İleri</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">700 TL</td>
                       </tr>
                     </tbody>
                   </table>
@@ -236,18 +261,24 @@ const PriceList = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">1 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">3 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">6 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">12 Ay</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Zumba Basic</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Pazartesi, Çarşamba</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">450 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1,200 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2,300 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">4,400 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Zumba Gold</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Salı, Perşembe</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">500 TL</td>
                       </tr>
                     </tbody>
                   </table>
@@ -267,18 +298,24 @@ const PriceList = () => {
                   <table className="min-w-full divide-y divide-gray-200">
                     <thead className="bg-gray-50">
                       <tr>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">1 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">3 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">6 Ay</th>
-                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">12 Ay</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Üye</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Kurs Adı</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Gün</th>
+                        <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ücret</th>
                       </tr>
                     </thead>
                     <tbody className="bg-white divide-y divide-gray-200">
                       <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Fitness + Havuz</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Her Gün</td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">800 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2,200 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">4,000 TL</td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">7,500 TL</td>
+                      </tr>
+                      <tr>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Bireysel</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">VIP Kombo</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Her Gün</td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">1000 TL</td>
                       </tr>
                     </tbody>
                   </table>
@@ -399,6 +436,9 @@ const PriceList = () => {
                 `${getCategoryName(selectedCategory, categoryType)} Detayları` : 
                 "Kurs Detayları"}
             </DialogTitle>
+            <DialogDescription>
+              Kurs detayları ve programları aşağıda listelenmiştir
+            </DialogDescription>
           </DialogHeader>
           <div className="mt-4 overflow-x-auto">
             <Table>
