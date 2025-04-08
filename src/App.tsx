@@ -11,6 +11,7 @@ import Announcements from "./pages/Announcements";
 import Contact from "./pages/Contact";
 import OnlineServices from "./pages/OnlineServices";
 import NotFound from "./pages/NotFound";
+import PsychologicalCounseling from "./pages/PsychologicalCounseling";
 
 // Layout
 import MainLayout from "./components/layout/MainLayout";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/duyurular" element={<Announcements />} />
             <Route path="/iletisim" element={<Contact />} />
             <Route path="/online-islemler" element={<OnlineServices />} />
+            <Route path="/kadin-danisma/psikolojik" element={<PsychologicalCounseling />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
