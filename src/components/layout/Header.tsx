@@ -13,16 +13,7 @@ const navigationLinks = [
       { name: "Beslenme Danışmanlığı", href: "/kadin-danisma/beslenme" },
     ] 
   },
-  { 
-    name: "Spor Merkezi", 
-    href: "/spor-merkezi",
-    submenu: [
-      { name: "Havuz", href: "/spor-merkezi/havuz" },
-      { name: "Fitness", href: "/spor-merkezi/fitness" },
-      { name: "Pilates", href: "/spor-merkezi/pilates" },
-      { name: "Sauna & Buhar Odası", href: "/spor-merkezi/sauna-buhar" },
-    ]
-  },
+  { name: "Spor Merkezi", href: "/spor-merkezi" },
   { 
     name: "İstihdam Merkezi", 
     href: "/istihdam-merkezi",
