@@ -9,6 +9,7 @@ import {
   CardHeader, 
   CardTitle 
 } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useNavigate } from "react-router-dom";
 
 interface CounselingService {
@@ -16,6 +17,7 @@ interface CounselingService {
   title: string;
   description: string;
   services: string[];
+  imageUrl: string;
 }
 
 const counselingServices: CounselingService[] = [
@@ -31,7 +33,8 @@ const counselingServices: CounselingService[] = [
       "Beklenti Farklılıkları ve Çözümleri",
       "Boşanma Süreci Danışmanlığı",
       "Aile İçinde Cinsellik ve Cinsel Sorunlar"
-    ]
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1609220136736-443140cffec6?auto=format&fit=crop&q=80&w=600&h=350"
   },
   {
     id: "psychological",
@@ -44,7 +47,8 @@ const counselingServices: CounselingService[] = [
       "Depresyon",
       "Panik Bozukluğu",
       "Sosyal Fobi ve Özgül Fobi"
-    ]
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&q=80&w=600&h=350"
   },
   {
     id: "child-adolescent",
@@ -59,7 +63,8 @@ const counselingServices: CounselingService[] = [
       "Uyum ve Davranış Sorunları",
       "Yas ve Kayıp Süreci",
       "Ebeveyn Danışmanlığı"
-    ]
+    ],
+    imageUrl: "https://images.unsplash.com/photo-1501686637-b7aa9c48a882?auto=format&fit=crop&q=80&w=600&h=350"
   }
 ];
 
@@ -82,7 +87,16 @@ const PsychologicalCounseling = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {counselingServices.map((service) => (
-          <Card key={service.id} className="flex flex-col h-full transition-all duration-200 hover:shadow-lg">
+          <Card key={service.id} className="flex flex-col h-full transition-all duration-200 hover:shadow-lg overflow-hidden">
+            <div className="overflow-hidden">
+              <AspectRatio ratio={16/9}>
+                <img
+                  src={service.imageUrl}
+                  alt={service.title}
+                  className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                />
+              </AspectRatio>
+            </div>
             <CardHeader>
               <CardTitle>{service.title}</CardTitle>
               <CardDescription>{service.description}</CardDescription>
