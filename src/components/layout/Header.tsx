@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from "lucide-react";
@@ -12,7 +11,6 @@ const navigationLinks = [
     submenu: [
       { name: "Psikolojik Danışmanlık", href: "/kadin-danisma/psikolojik" },
       { name: "Beslenme Danışmanlığı", href: "/kadin-danisma/beslenme" },
-      { name: "Hukuk Danışmanlığı", href: "/kadin-danisma/hukuk" },
     ] 
   },
   { 
