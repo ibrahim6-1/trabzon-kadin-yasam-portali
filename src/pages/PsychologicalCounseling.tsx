@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/card";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useNavigate } from "react-router-dom";
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
+import { Utensils } from "lucide-react";
 
 interface CounselingService {
   id: string;
@@ -68,12 +70,31 @@ const counselingServices: CounselingService[] = [
   }
 ];
 
+// Nutrition counseling data
+const nutritionCounselingData = {
+  id: "nutrition",
+  title: "Beslenme Danışmanlığı",
+  description: "Sağlıklı yaşam için uzman diyetisyenlerimizden beslenme danışmanlığı hizmetleri",
+  services: [
+    "Sağlıklı Sürdürülebilir Beslenme",
+    "Kilo Alma & Kilo Verme",
+    "Hastalıklara Özel Beslenme",
+    "Gebelik Öncesi ve Sürecinde Beslenme",
+    "Emzirme Döneminde Beslenme"
+  ],
+  imageUrl: "https://images.unsplash.com/photo-1490818387583-1baba5e638af?auto=format&fit=crop&q=80&w=600&h=350"
+};
+
 const PsychologicalCounseling = () => {
   const navigate = useNavigate();
   
   const handleRegister = (serviceId: string) => {
     // Navigate to registration page or open registration form
     navigate("/online-islemler?service=" + serviceId);
+  };
+
+  const handleNutritionClick = () => {
+    navigate("/kadin-danisma/beslenme");
   };
 
   return (
@@ -118,6 +139,41 @@ const PsychologicalCounseling = () => {
             </CardFooter>
           </Card>
         ))}
+        
+        {/* Nutrition Counseling Card */}
+        <Card className="flex flex-col h-full transition-all duration-200 hover:shadow-lg overflow-hidden bg-gradient-to-br from-green-50 to-white">
+          <div className="overflow-hidden">
+            <AspectRatio ratio={16/9}>
+              <img
+                src={nutritionCounselingData.imageUrl}
+                alt={nutritionCounselingData.title}
+                className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+              />
+            </AspectRatio>
+          </div>
+          <CardHeader>
+            <div className="flex items-center gap-2">
+              <Utensils className="h-5 w-5 text-green-600" />
+              <CardTitle>{nutritionCounselingData.title}</CardTitle>
+            </div>
+            <CardDescription>{nutritionCounselingData.description}</CardDescription>
+          </CardHeader>
+          <CardContent className="flex-grow">
+            <ul className="list-disc pl-5 space-y-2">
+              {nutritionCounselingData.services.map((item, index) => (
+                <li key={index} className="text-gray-700">{item}</li>
+              ))}
+            </ul>
+          </CardContent>
+          <CardFooter>
+            <Button 
+              onClick={handleNutritionClick} 
+              className="w-full bg-green-600 hover:bg-green-700"
+            >
+              Detaylı Bilgi
+            </Button>
+          </CardFooter>
+        </Card>
       </div>
     </div>
   );
