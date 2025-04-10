@@ -12,7 +12,7 @@ import {
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { useNavigate } from "react-router-dom";
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card";
-import { Utensils, Users, Brain, Child } from "lucide-react";
+import { Utensils, Users, Brain, BabyIcon } from "lucide-react";
 
 interface CounselingService {
   id: string;
@@ -76,7 +76,7 @@ const counselingServices: CounselingService[] = [
       "Ebeveyn Danışmanlığı"
     ],
     imageUrl: "https://images.unsplash.com/photo-1501686637-b7aa9c48a882?auto=format&fit=crop&q=80&w=600&h=350",
-    icon: <Child className="h-5 w-5 text-pink-600" />,
+    icon: <BabyIcon className="h-5 w-5 text-pink-600" />,
     color: "text-pink-600",
     gradient: "bg-gradient-to-br from-pink-50 to-white"
   }
