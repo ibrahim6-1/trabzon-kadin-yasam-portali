@@ -12,7 +12,6 @@ import Contact from "./pages/Contact";
 import OnlineServices from "./pages/OnlineServices";
 import NotFound from "./pages/NotFound";
 import PsychologicalCounseling from "./pages/PsychologicalCounseling";
-import NutritionCounseling from "./pages/NutritionCounseling";
 import SportsCenter from "./pages/SportsCenter";
 
 // Layout
@@ -32,8 +31,7 @@ const App = () => (
             <Route path="/duyurular" element={<Announcements />} />
             <Route path="/iletisim" element={<Contact />} />
             <Route path="/online-islemler" element={<OnlineServices />} />
-            <Route path="/kadin-danisma/psikolojik" element={<PsychologicalCounseling />} />
-            <Route path="/kadin-danisma/beslenme" element={<NutritionCounseling />} />
+            <Route path="/kadin-danisma" element={<PsychologicalCounseling />} />
             <Route path="/spor-merkezi" element={<SportsCenter />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
