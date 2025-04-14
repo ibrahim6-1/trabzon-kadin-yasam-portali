@@ -11,14 +11,7 @@ const navigationLinks = [
   },
   { name: "Spor Merkezi", href: "/spor-merkezi" },
   { name: "İstihdam Merkezi", href: "/istihdam-merkezi" },
-  { 
-    name: "Kültür Sanat Merkezi", 
-    href: "/kultur-sanat",
-    submenu: [
-      { name: "Sergiler", href: "/kultur-sanat/sergiler" },
-      { name: "Etkinlikler", href: "/kultur-sanat/etkinlikler" },
-    ]
-  },
+  { name: "Kültür Sanat Merkezi", href: "/kultur-sanat" },
   { name: "Duyurular", href: "/duyurular" },
   { name: "Online İşlemler", href: "/online-islemler" },
   { name: "İletişim", href: "/iletisim" },
