@@ -1,7 +1,7 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Home = () => {
   return (
@@ -42,6 +42,41 @@ const Home = () => {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+      </section>
+
+      {/* YouTube Video Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
+            Merkezimizden Görüntüler
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <AspectRatio ratio={16 / 9} className="bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+              <div className="w-full h-full flex items-center justify-center">
+                <div className="text-gray-500 text-center p-6">
+                  <p className="mb-4">YouTube video buraya eklenecek</p>
+                  <p className="text-sm">YouTube video ID'sini buraya yerleştirin</p>
+                </div>
+                {/* 
+                  YouTube embed kodu buraya eklenecek.
+                  Örnek:
+                  <iframe 
+                    width="100%" 
+                    height="100%" 
+                    src="https://www.youtube.com/embed/VIDEO_ID_HERE" 
+                    title="YouTube video" 
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen
+                  ></iframe>
+                */}
+              </div>
+            </AspectRatio>
+            <p className="text-gray-600 text-center mt-4">
+              Trabzon Kadın Yaşam Merkezi'nin etkinliklerini ve hizmetlerini yakından tanıyın.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* Services Overview Section */}
