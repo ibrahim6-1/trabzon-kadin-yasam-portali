@@ -5,10 +5,7 @@ import { Menu, X } from "lucide-react";
 // Navigation links configuration
 const navigationLinks = [
   { name: "Ana Sayfa", href: "/" },
-  { 
-    name: "Kadın Danışma Merkezi", 
-    href: "/kadin-danisma"
-  },
+  { name: "Kadın Danışma Merkezi", href: "/kadin-danisma" },
   { name: "Spor Merkezi", href: "/spor-merkezi" },
   { name: "İstihdam Merkezi", href: "/istihdam-merkezi" },
   { name: "Kültür Sanat Merkezi", href: "/kultur-sanat" },
@@ -21,6 +18,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
+  // We'll keep the toggleSubmenu function for potential future use
   const toggleSubmenu = (name: string) => {
     if (activeSubmenu === name) {
       setActiveSubmenu(null);
@@ -52,20 +50,6 @@ const Header = () => {
                 >
                   {link.name}
                 </Link>
-                
-                {link.submenu && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-lg py-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                    {link.submenu.map((sublink) => (
-                      <Link
-                        key={sublink.name}
-                        to={sublink.href}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-accent hover:text-primary"
-                      >
-                        {sublink.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
               </div>
             ))}
           </nav>
@@ -86,42 +70,13 @@ const Header = () => {
           <div className="container mx-auto px-4">
             {navigationLinks.map((link) => (
               <div key={link.name} className="py-2">
-                {link.submenu ? (
-                  <>
-                    <button
-                      onClick={() => toggleSubmenu(link.name)}
-                      className="w-full flex justify-between items-center text-left text-gray-700 hover:text-primary py-2"
-                    >
-                      <span>{link.name}</span>
-                      <span className="text-xs">
-                        {activeSubmenu === link.name ? "▲" : "▼"}
-                      </span>
-                    </button>
-                    
-                    {activeSubmenu === link.name && (
-                      <div className="pl-4 mt-1 border-l-2 border-primary">
-                        {link.submenu.map((sublink) => (
-                          <Link
-                            key={sublink.name}
-                            to={sublink.href}
-                            className="block py-2 text-sm text-gray-700 hover:text-primary"
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {sublink.name}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </>
-                ) : (
-                  <Link
-                    to={link.href}
-                    className="block text-gray-700 hover:text-primary py-2"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    {link.name}
-                  </Link>
-                )}
+                <Link
+                  to={link.href}
+                  className="block text-gray-700 hover:text-primary py-2"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
               </div>
             ))}
           </div>
