@@ -13,6 +13,7 @@ import OnlineServices from "./pages/OnlineServices";
 import NotFound from "./pages/NotFound";
 import PsychologicalCounseling from "./pages/PsychologicalCounseling";
 import SportsCenter from "./pages/SportsCenter";
+import EmploymentCenter from "./pages/EmploymentCenter";
 
 // Layout
 import MainLayout from "./components/layout/MainLayout";
@@ -33,6 +34,7 @@ const App = () => (
             <Route path="/online-islemler" element={<OnlineServices />} />
             <Route path="/kadin-danisma" element={<PsychologicalCounseling />} />
             <Route path="/spor-merkezi" element={<SportsCenter />} />
+            <Route path="/istihdam-merkezi" element={<EmploymentCenter />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
